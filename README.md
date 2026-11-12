@@ -107,3 +107,21 @@ writes the line without it.
 ## Licence
 
 MIT. Use it, change it, ship it.
+
+## Separate TikTok creator and audit skill
+
+[`skills/tiktok-creator/SKILL.md`](skills/tiktok-creator/SKILL.md) adds original comedy
+ideation (including a provisional @DailyRaaz brief), timed scripts, evidence-based audits,
+capacity-based plans and offline CSV performance tracking. The existing YouTube skills
+and plugin configuration are unchanged. No TikTok connection or publisher is included;
+any upload, scheduling or posting requires approval of the exact final package.
+
+Copy the entire `skills/tiktok-creator` folder to a new
+`~/.claude/skills/tiktok-creator` directory, or `.claude/skills/tiktok-creator` in your
+project. Check that the destination does not already exist before copying. Invoke
+`/tiktok-creator` in Claude Code. The entrypoint includes examples and installation details.
+The original `yt-*` installation commands above do not install this separate folder.
+
+Validate the offline helper with `python3 -m unittest discover -s tests -v`.
+See [`tests/tiktok-scenarios.md`](tests/tiktok-scenarios.md) for behavioral review cases
+and the distinction between local checks and a live Claude smoke test.
